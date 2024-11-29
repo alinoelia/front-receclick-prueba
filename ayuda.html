@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/stylesAyuda.css" />
+    <link rel="stylesheet" href="/css/navbar.css">
+    <title>Ayuda</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="index.html">
+            <img class="logo" src="/img/logoRECEC.webp" alt="Logo" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 d-flex w-100 justify-content-around">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recetas</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="recetasSaladas.html">Saladas</a></li>
+                  <li><a class="dropdown-item" href="recetasDulces.html">Dulces</a></li>
+                  <li><a class="dropdown-item" href="subir-receta.html">Subir receta</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="informacion.html">Información</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link activo" href="ayuda.html">Ayuda</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-outline-success me-3" type="button">
+                <a href="tienda.html">Donar</a>
+              </button>
+              <button class="btn btn-sm btn-outline-secondary" type="button">
+                <a href="login.html">Ingresar</a>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>	
+    </header>
+    
+    <main>
+      <div class="cajatitulo">
+        <img src="/img/blobtitulo.png" alt="fondo titulo" width="50%" height="50%"/>
+          <h1 class="titulo">Ayuda</h1>
+      </div>
+
+      <section class="cajaborde">
+        <div class="contenedor2">
+          <!-- Caja de preguntas frecuentes -->
+          <div class="preguntas">
+            <details>
+                <summary>
+                    <b>01</b> ¿Cómo recupero mi contraseña?
+                </summary>
+                <div class="content">
+                  ¿Olvidaste tu contraseña?
+                  No te preocupes, sigue estos pasos para recuperarla:
+                  <br>
+                  1. Haz clic en el botón "Recuperar contraseña" desde la sección de Ingresar.<br>
+                  2. Ingresa el correo electrónico asociado a tu cuenta.<br>
+                  3. Revisa tu bandeja de entrada, donde recibirás un enlace para restablecerla.<br>
+                  4. Haz clic en el enlace y crea una nueva contraseña segura.<br>
+                  Si necesitas ayuda, contáctanos. ¡Estamos aquí para asistirte!
+                </div>
+            </details>
+  
+            <details>
+                <summary>
+                    <b>02</b> ¿Cómo guardo las recetas?
+                </summary>
+                <div class="content">
+                    Por el momento no tenemos la opción de guardar recetas.<br>
+                    Pero estara disponible para próximas actualizaciones en nuestra página.
+                </div>
+            </details>
+  
+            <details>
+              <summary>
+                  <b>03</b> ¿Puedo agregar recetas a la pagina?
+              </summary>
+              <div class="content">
+                  Claro que si!
+                  <br>
+                  En la seccion de recetas vas a encontrar un apartado que dice "Subir receta". <br>
+                  Haciendo click ahi vas a encontrar un formulario donde podras agregar el nombre, 
+                  los ingredientes y una foto de tu receta.
+              </div>
+            </details>
+  
+            <details>
+                <summary>
+                    <b>04</b> ¿Cómo puedo colaborar en los comedores?
+                </summary>
+                <div class="content">
+                    Para colaborar con los comedores tenemos un botón que te va a permitir ayudarlos desde la comodidad de tu casa.<br>
+                    Haciendo click en el botón que dice "Donar" podrás comprar un pack de recetas que tenemos para ti.<br>
+                    Esa plata va a ser dirigida a los comedores y a cambio tu tendrás un pack de 10 recetas de la categoría que hayas elegido.
+                </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seccion de comentarios-->
+      <section class="cajaborde"  id="ayudanos">
+        <div class="contenedor3">
+          <h2>Ayúdanos a mejorar</h2>
+          <form class="formulario" id="feedbackForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+
+            <button class="boton-1" type="submit">Enviar</button>
+          </form>
+
+          <script>
+            document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = {
+              nombre: document.getElementById('nombre').value,
+              email: document.getElementById('email').value,
+              mensaje: document.getElementById('mensaje').value
+            };
+
+            const response = await fetch('http://localhost:5000/enviar-feedback', {
+              method: 'POST',
+              headers: {
+              'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
+            });
+
+            const result = await response.text();
+            alert(result);
+            });
+          </script>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <ul class="social-icon">
+        <li class="icon-elemento">
+          <a href="https://www.instagram.com/receclick.ar?igsh=MWg2b2RmN3ZtYTdtNA==" class="icon">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="#" class="icon">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
+        </li>
+        <li class="icon-elemento">
+          <a href="#" class="icon">
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu-elemento">
+          <a href="index.html" class="menu-icon"> Inicio </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="sobre-nosotros.html#nosotros" class="menu-icon"> Equipo </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="ayuda.html#ayudanos" class="menu-icon"> Contacto </a>
+        </li>
+        <li class="menu-elemento">
+          <a href="sobre-nosotros.html" class="menu-icon"> Sobre Nosotros </a>
+        </li>
+      </ul>
+      <p class="text">© Receclick 2024 | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

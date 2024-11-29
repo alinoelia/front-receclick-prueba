@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #F8F6E7;
+    color: #303F46;
+    font-weight: 300;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+/* ! Arreglos para el navbar*/
+.btn{
+    background-color: #FFC202;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #F98329;
+    transform: scale(1.1);
+}
+
+a{
+    color: #303F46;
+    text-decoration: none;
+}
+.nav-item {
+    font-weight: 400;
+
+}
+
+/* Caja Titulo */
+.cajatitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 30px;
+    top: 50px;
+}
+
+/* .cajatitulo img {
+    width: 100%;
+    height: auto;
+    max-width: 65%;
+} */
+
+.titulo {
+    font-size: 4rem;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: #303F46;
+    text-align: center;
+}
+
+/* Sección de Reciclaje y Comedores */
+.informacion, .comedores {
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que el contenido se acomode en varias filas en pantallas pequeñas */
+    justify-content: center; /* Distribuye los bloques de contenido */
+    width: 80%; /* Limita el ancho al 80% del contenedor */
+    max-width: 1200px; /* Ajusta el ancho máximo para que no ocupe toda la pantalla en pantallas grandes */
+    margin-left: auto; /* Alinea el contenedor al centro */
+    margin-right: auto; 
+}
+
+.informacion .contenido, .comedores .contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #F8F6E7; /* Fondo blanco para cada caja */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: solid #f98329 2px;
+}
+
+.informacion h2, .comedores h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    width: 90%; /* Asegura que el título se expanda a lo largo de toda la caja */
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Ajuste para el texto */
+.contenido p, .contenido ul {
+    width: 45%; /* El texto ocupa el 45% del contenedor */
+    margin-left: 20px; /* Espacio entre el texto y la imagen */
+    font-size: 1rem;
+    line-height: 1.5;
+    justify-content: center;
+}
+
+
+/* Estilos para el texto */
+.contenido p, .contenido ul {
+    width: 90%;
+    margin-right: 60px; 
+    font-size: 18px
+}
+/* Sección Comedores*/
+.comedores {
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.informacion .imagen-info {
+    width: 100%;
+    height: auto;
+}
+.imagen-info {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Estilo del texto */
+.comedores .contenido p, .comedores .contenido ul {
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/* ! Estilos del footer */
+footer{
+    background-color:#FFC202;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .text {
+    color: #F8F6E7;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap
+}
+
+.icon-elemento {
+    list-style: none;
+}
+
+.icon {
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+    color: #303F46;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elemento {
+    list-style: none;
+}
+
+.menu-icon {
+    color: #303F46;
+    font-weight: 400;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        background-color: #FFC202;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .cajatitulo {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .cajatitulo img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .titulo {
+        font-size: 2.5rem;
+        top: 50%;
+        transform: translate(-50%, -30%);
+    }
+
+    .informacion h2, .comedores h2 {
+        font-size: 35px;
+        margin: 0 0 15px 0;
+    }
+
+    .informacion h3 {
+        font-size: 25px;
+    }
+
+    .informacion .contenido, .comedores .contenido {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .imagen-info {
+        width: 100%; /* Imagen ocupa el 80% en pantallas más pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .contenido p, .contenido ul {
+        width: 90%; /* El texto ocupa el 100% en pantallas más pequeñas */
+        display: grid;
+        justify-content: center;
+        font-size: 17px;
+    }
+
+    .mapa {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titulo {
+        font-size: 2rem;
+    }
+
+    .informacion h2, .comedores h2 {
+        font-size: 1.5rem;
+    }
+}
